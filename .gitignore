@@ -1,0 +1,55 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and Editor Files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Build and Output Directories
+dist/
+build/
+out/
+target/
+
+# Dependency Directories
+node_modules/
+vendor/
+
+# Log Files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment Files
+.env
+.env.local
+.env.*.local
+
+# Compiled Files
+*.class
+*.jar
+*.war
+*.ear
+*.dll
+*.exe
+*.o
+*.so
+
+# Package Files
+*.zip
+*.tar.gz
+*.rar
+
+# macOS system files
+.AppleDouble
+.LSOverride
+
+# Runtime data
+tmp/
+temp/ 
