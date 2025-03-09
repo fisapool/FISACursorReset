@@ -20,13 +20,52 @@ A terminal-based interface for managing Cursor AI installation and configuration
 - 🛠️ Post-installation configuration
 - 💻 Cross-platform support (macOS & Windows)
 
-## Requirements
+## System Requirements
 
 ### macOS
 - macOS 10.10 or later
 - ARM64 architecture (M1/M2)
 - 4GB RAM minimum
 - 2GB free disk space
+- Terminal access
+
+### Windows
+- Windows 10 or later
+- 4GB RAM minimum
+- 2GB free disk space
+- Git Bash (Required)
+- PowerShell or Command Prompt with Admin rights
+
+## Installation
+
+### macOS
+
+Method 1: Direct Download (Recommended)
+```bash
+# Download the script
+curl -O https://raw.githubusercontent.com/fisapool/FISACursorReset/main/cursor-terminal.sh
+
+# Make it executable
+chmod +x cursor-terminal.sh
+
+# Run the script
+./cursor-terminal.sh
+```
+
+Method 2: Quick Install
+```bash
+# One-line installation (Use with caution)
+curl -fsSL https://raw.githubusercontent.com/fisapool/FISACursorReset/main/cursor-terminal.sh | bash
+```
+
+Method 3: Git Clone
+```bash
+# Clone the repository
+git clone https://github.com/fisapool/FISACursorReset.git
+cd FISACursorReset
+chmod +x cursor-terminal.sh
+./cursor-terminal.sh
+```
 
 ### Windows
 
@@ -34,7 +73,7 @@ Prerequisites:
 - Git Bash (Required) - [Download here](https://git-scm.com/download/win)
 - PowerShell or Command Prompt (Admin)
 
-Method 1: Using PowerShell
+Method 1: PowerShell (Recommended)
 ```powershell
 # Download both required scripts
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/fisapool/FISACursorReset/main/cursor-terminal.bat" -OutFile "cursor-terminal.bat"
@@ -44,35 +83,71 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/fisapool/FISACursorRes
 .\cursor-terminal.bat
 ```
 
-Method 2: Manual Download
+Method 2: Git Clone
+```bash
+# Clone using Git Bash
+git clone https://github.com/fisapool/FISACursorReset.git
+cd FISACursorReset
+./cursor-terminal.bat
+```
+
+Method 3: Manual Download
 1. Visit [FISACursorReset](https://github.com/fisapool/FISACursorReset)
 2. Download both `cursor-terminal.bat` and `cursor-terminal.sh`
 3. Place both files in the same directory
 4. Double-click `cursor-terminal.bat` to run
 
-### Verification
+### Verification Steps (All Platforms)
 
-After installation, verify that:
-- Script has executable permissions (macOS)
-- No antivirus blocking (Windows)
-- Terminal has administrative privileges
+After downloading:
+1. Verify file permissions
+   - macOS: Script should be executable
+   - Windows: Both .bat and .sh files present
 
-### Troubleshooting
+Before running:
+1. Check administrative privileges
+2. Ensure antivirus isn't blocking
+3. Verify Git Bash is installed (Windows only)
 
-If you encounter permission issues on macOS:
+If you encounter issues:
+
+macOS:
 ```bash
-# Grant full permissions
+# Fix permissions if needed
 sudo chmod +x cursor-terminal.sh
 
-# Run with sudo if needed
+# Run with sudo if required
 sudo ./cursor-terminal.sh
 ```
 
-For Windows permission issues:
-1. Right-click cursor-terminal.bat
+Windows:
+1. Right-click `cursor-terminal.bat`
 2. Select "Run as administrator"
+3. If blocked, try:
+   ```powershell
+   # In PowerShell (Admin)
+   Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+   ```
 
-### Post-Installation
+## Troubleshooting
+
+### macOS Issues
+```bash
+# If permission denied:
+sudo chmod +x cursor-terminal.sh
+sudo ./cursor-terminal.sh
+
+# If curl fails, try:
+sudo curl -O https://raw.githubusercontent.com/fisapool/FISACursorReset/main/cursor-terminal.sh
+```
+
+### Windows Issues
+- Run as Administrator
+- Disable antivirus temporarily
+- Ensure Git Bash is installed
+- Try running from C:\ drive root
+
+## Post-Installation
 
 After successful installation:
 1. Launch Cursor AI
